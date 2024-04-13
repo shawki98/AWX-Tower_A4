@@ -1,2 +1,14 @@
 kubectl -n awx logs -f deployments/awx-operator-controller-manager
 kubectl -n awx get awx,all,ingress,secrets
+
+---
+all:
+  hosts:
+    MockDevice1:
+      ansible_host: 192.168.1.1
+      ansible_user: admin
+      ansible_ssh_pass: Ansible123!
+    MockDevice2:
+      ansible_host: 192.168.2.1
+      ansible_user: admin
+      ansible_ssh_pass: Ansible123!
