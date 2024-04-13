@@ -1,0 +1,1 @@
+kubectl -n awx logs -f deployments/awx-operator-controller-manager
