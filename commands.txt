@@ -27,6 +27,24 @@ credentials:
       register: result
     - debug: var=result.stdout_lines
 
+all:
+  hosts:
+    Mock-Device1:
+      ansible_host: 192.168.2.1
+      ansible_user: admin
+      ansible_ssh_pass: Ansible123!
+    Mock-Device2:
+      ansible_host: 192.168.2.2
+      ansible_user: admin
+      ansible_ssh_pass: Ansible123!
+
+- name: Ping mock devices
+  hosts: all
+  tasks:
+    - name: Ping device
+      ping:
+
+
 Cannot parse as JSON (error: Expecting value: line 1 column 1 (char 0)) or YAML (error: Input type `list` is not a dictionary).
 
 SSH password: 
