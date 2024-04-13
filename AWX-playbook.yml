@@ -1,0 +1,8 @@
+---
+- name: Ping mock devices
+  hosts: all
+  gather_facts: no
+
+  tasks:
+    - name: Ping device
+      ping:
