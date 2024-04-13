@@ -28,3 +28,12 @@ credentials:
     - debug: var=result.stdout_lines
 
 Cannot parse as JSON (error: Expecting value: line 1 column 1 (char 0)) or YAML (error: Input type `list` is not a dictionary).
+
+SSH password: 
+PLAY [Ping mock devices] *******************************************************
+TASK [Ping device] *************************************************************
+fatal: [Mock-Device2]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname mock-device2: Name or service not known", "unreachable": true}
+fatal: [Mock-Device1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname mock-device1: Name or service not known", "unreachable": true}
+PLAY RECAP *********************************************************************
+Mock-Device1               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+Mock-Device2               : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0
