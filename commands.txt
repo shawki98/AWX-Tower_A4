@@ -26,3 +26,5 @@ credentials:
           - show version
       register: result
     - debug: var=result.stdout_lines
+
+Cannot parse as JSON (error: Expecting value: line 1 column 1 (char 0)) or YAML (error: Input type `list` is not a dictionary).
